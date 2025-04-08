@@ -1,13 +1,15 @@
 
 import { ArrowLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 interface PropertyHeaderProps {
   title: string;
+  defaultTab?: string;
+  onTabChange?: (value: string) => void;
 }
 
-const PropertyHeader = ({ title }: PropertyHeaderProps) => {
+const PropertyHeader = ({ title, defaultTab = "analysis", onTabChange }: PropertyHeaderProps) => {
   return (
     <div className="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="flex flex-col space-y-4">
@@ -26,18 +28,34 @@ const PropertyHeader = ({ title }: PropertyHeaderProps) => {
         
         <h1 className="text-2xl font-bold text-inverater-dark sm:text-3xl">{title}</h1>
         
-        <Tabs defaultValue="analysis" className="w-full">
+        <Tabs 
+          defaultValue={defaultTab} 
+          className="w-full"
+          onValueChange={onTabChange}
+        >
           <TabsList className="grid w-full max-w-md grid-cols-4">
-            <TabsTrigger value="analysis" className="data-[state=active]:bg-inverater-secondary data-[state=active]:text-white">
+            <TabsTrigger 
+              value="analysis" 
+              className="data-[state=active]:bg-inverater-secondary data-[state=active]:text-white"
+            >
               Análisis
             </TabsTrigger>
-            <TabsTrigger value="updates" className="data-[state=active]:bg-inverater-secondary data-[state=active]:text-white">
+            <TabsTrigger 
+              value="updates" 
+              className="data-[state=active]:bg-inverater-secondary data-[state=active]:text-white"
+            >
               Actualizaciones
             </TabsTrigger>
-            <TabsTrigger value="support" className="data-[state=active]:bg-inverater-secondary data-[state=active]:text-white">
+            <TabsTrigger 
+              value="support" 
+              className="data-[state=active]:bg-inverater-secondary data-[state=active]:text-white"
+            >
               Respaldo
             </TabsTrigger>
-            <TabsTrigger value="details" className="data-[state=active]:bg-inverater-secondary data-[state=active]:text-white">
+            <TabsTrigger 
+              value="details" 
+              className="data-[state=active]:bg-inverater-secondary data-[state=active]:text-white"
+            >
               Torre Alejandría
             </TabsTrigger>
           </TabsList>

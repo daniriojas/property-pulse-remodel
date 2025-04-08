@@ -9,6 +9,7 @@ const PropertyImage = () => {
   const images = [
     "/lovable-uploads/2aeffb1e-8721-4068-9761-25f2572de5dc.png",
     "/lovable-uploads/55aca35e-0da2-4a5e-bd14-af0beec71dac.png",
+    "/lovable-uploads/28374962-2d40-4867-aec4-b4838b715662.png",
   ];
   
   const nextImage = () => {
