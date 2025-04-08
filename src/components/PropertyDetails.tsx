@@ -41,7 +41,7 @@ const PropertyDetails = () => {
               <span className="font-medium text-inverater-secondary">24%</span>
             </div>
             <div className="relative h-2">
-              <Progress value={24} className="h-2 bg-gray-200" indicatorClassName="bg-inverater-secondary" />
+              <Progress value={24} className="h-2 bg-gray-200" />
             </div>
             <div className="flex justify-between mt-1 text-xs text-gray-500">
               <span>0%</span>
