@@ -7,6 +7,7 @@ const PropertyImage = () => {
   const [currentImage, setCurrentImage] = useState(0);
   
   const images = [
+    "/lovable-uploads/2aeffb1e-8721-4068-9761-25f2572de5dc.png",
     "/lovable-uploads/55aca35e-0da2-4a5e-bd14-af0beec71dac.png",
   ];
   
