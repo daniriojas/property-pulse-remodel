@@ -8,7 +8,7 @@ const ProjectInfo = () => {
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm">
+        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
           <CardContent className="p-0">
             <div className="p-4 flex flex-col h-full">
               <div className="flex items-center mb-2">
@@ -23,7 +23,7 @@ const ProjectInfo = () => {
           </CardContent>
         </Card>
         
-        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm">
+        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
           <CardContent className="p-0">
             <div className="p-4 flex flex-col h-full">
               <div className="flex items-center mb-2">
@@ -41,7 +41,7 @@ const ProjectInfo = () => {
           </CardContent>
         </Card>
         
-        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm">
+        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
           <CardContent className="p-0">
             <div className="p-4 flex flex-col h-full">
               <div className="flex items-center mb-2">
@@ -84,19 +84,19 @@ const ProjectInfo = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
-            <div className="bg-gray-50 p-3 rounded-lg">
+            <div className="bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
               <div className="text-sm text-gray-500">Ubicación</div>
               <div className="font-medium">San Pedro Garza García</div>
             </div>
-            <div className="bg-gray-50 p-3 rounded-lg">
+            <div className="bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
               <div className="text-sm text-gray-500">Desarrollador</div>
               <div className="font-medium">Grupo Inmobiliario ABC</div>
             </div>
-            <div className="bg-gray-50 p-3 rounded-lg">
+            <div className="bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
               <div className="text-sm text-gray-500">Superficie</div>
               <div className="font-medium">15,000 m²</div>
             </div>
-            <div className="bg-gray-50 p-3 rounded-lg">
+            <div className="bg-gray-50 p-3 rounded-lg hover:bg-gray-100 transition-colors">
               <div className="text-sm text-gray-500">Unidades</div>
               <div className="font-medium">120 departamentos</div>
             </div>
