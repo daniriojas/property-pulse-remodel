@@ -24,17 +24,17 @@ const Index = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       
-      <main>
+      <main className="pb-16">
         <PropertyHeader 
           title="Torre Alejandría Residencias - Campaña 1" 
           defaultTab={activeTab}
           onTabChange={handleTabChange}
         />
         
-        <div className="max-w-7xl mx-auto px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 pt-4 sm:px-6 lg:px-8">
           <Tabs value={activeTab} className="w-full">
             <TabsContent value="analysis" className="mt-0">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2 space-y-6">
                   <PropertyImage />
                   <ProjectInfo />
@@ -44,7 +44,7 @@ const Index = () => {
                 </div>
                 
                 <div className="lg:col-span-1">
-                  <div className="sticky top-6">
+                  <div className="sticky top-24">
                     <PropertyDetails />
                   </div>
                 </div>
@@ -52,13 +52,13 @@ const Index = () => {
             </TabsContent>
 
             <TabsContent value="updates" className="mt-0">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
                   <UpdatesView />
                 </div>
                 
                 <div className="lg:col-span-1">
-                  <div className="sticky top-6">
+                  <div className="sticky top-24">
                     <PropertyDetails />
                   </div>
                 </div>
@@ -66,13 +66,13 @@ const Index = () => {
             </TabsContent>
 
             <TabsContent value="support" className="mt-0">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
                   <SupportView />
                 </div>
                 
                 <div className="lg:col-span-1">
-                  <div className="sticky top-6">
+                  <div className="sticky top-24">
                     <PropertyDetails />
                   </div>
                 </div>
@@ -80,13 +80,13 @@ const Index = () => {
             </TabsContent>
 
             <TabsContent value="details" className="mt-0">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
                   <DevelopmentView />
                 </div>
                 
                 <div className="lg:col-span-1">
-                  <div className="sticky top-6">
+                  <div className="sticky top-24">
                     <PropertyDetails />
                   </div>
                 </div>

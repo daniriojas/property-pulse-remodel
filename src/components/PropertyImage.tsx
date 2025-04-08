@@ -1,10 +1,17 @@
 
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Heart, Share, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
 
 const PropertyImage = () => {
-  const [currentImage, setCurrentImage] = useState(0);
+  const [favorite, setFavorite] = useState(false);
   
   const images = [
     "/lovable-uploads/2aeffb1e-8721-4068-9761-25f2572de5dc.png",
@@ -12,44 +19,67 @@ const PropertyImage = () => {
     "/lovable-uploads/28374962-2d40-4867-aec4-b4838b715662.png",
   ];
   
-  const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length);
-  };
-  
-  const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+  const toggleFavorite = () => {
+    setFavorite(!favorite);
   };
   
   return (
-    <div className="relative rounded-lg overflow-hidden shadow-md mb-8">
-      <div className="aspect-video bg-gray-100 relative">
-        <img
-          src={images[currentImage]}
-          alt="Torre Alejandría"
-          className="w-full h-full object-cover"
-        />
+    <div className="relative overflow-hidden rounded-xl shadow-sm mb-6 bg-gray-100">
+      <Carousel className="w-full">
+        <CarouselContent>
+          {images.map((image, index) => (
+            <CarouselItem key={index}>
+              <div className="relative aspect-[16/9]">
+                <img
+                  src={image}
+                  alt={`Torre Alejandría ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                
+                <div className="absolute bottom-4 left-4 text-white">
+                  <div className="flex items-center space-x-2">
+                    <span className="bg-inverater-secondary px-2 py-1 rounded-md text-sm font-medium">CAMPAÑA ACTIVA</span>
+                    <span className="bg-inverater-primary px-2 py-1 rounded-md text-sm font-medium">21% - 50.17%</span>
+                  </div>
+                </div>
+
+                <div className="absolute top-4 right-4 flex space-x-2">
+                  <Button 
+                    variant="outline" 
+                    size="icon" 
+                    className="bg-white/20 backdrop-blur-sm border-white/30 hover:bg-white/30 rounded-full"
+                    onClick={() => {}}
+                  >
+                    <Info className="h-5 w-5 text-white" />
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="icon" 
+                    className="bg-white/20 backdrop-blur-sm border-white/30 hover:bg-white/30 rounded-full"
+                    onClick={() => {}}
+                  >
+                    <Share className="h-5 w-5 text-white" />
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="icon" 
+                    className={`backdrop-blur-sm border-white/30 hover:bg-white/30 rounded-full ${favorite ? 'bg-inverater-primary border-inverater-primary' : 'bg-white/20'}`}
+                    onClick={toggleFavorite}
+                  >
+                    <Heart className={`h-5 w-5 ${favorite ? 'text-white fill-current' : 'text-white'}`} />
+                  </Button>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
         
-        {images.length > 1 && (
-          <>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 text-white rounded-full hover:bg-black/50"
-              onClick={prevImage}
-            >
-              <ChevronLeft className="h-6 w-6" />
-            </Button>
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 text-white rounded-full hover:bg-black/50"
-              onClick={nextImage}
-            >
-              <ChevronRight className="h-6 w-6" />
-            </Button>
-          </>
-        )}
-      </div>
+        <div className="absolute bottom-4 right-4 flex space-x-2">
+          <CarouselPrevious className="bg-white/20 backdrop-blur-sm border-white/30 hover:bg-white/30 -left-4 h-8 w-8 rounded-full" />
+          <CarouselNext className="bg-white/20 backdrop-blur-sm border-white/30 hover:bg-white/30 -right-4 h-8 w-8 rounded-full" />
+        </div>
+      </Carousel>
     </div>
   );
 };

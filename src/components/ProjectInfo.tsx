@@ -1,107 +1,108 @@
 
-import { Calendar, DollarSign, AlertTriangle, Medal, Shield } from "lucide-react";
+import { CheckCircle2, BarChart, Building, Clock, ArrowUpRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Button } from "@/components/ui/button";
 
 const ProjectInfo = () => {
   return (
-    <div className="space-y-8">
-      <div>
-        <h2 className="text-xl font-bold text-inverater-dark border-b pb-2 mb-6">
-          Información general de la campaña
-        </h2>
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm">
+          <CardContent className="p-0">
+            <div className="p-4 flex flex-col h-full">
+              <div className="flex items-center mb-2">
+                <CheckCircle2 className="h-5 w-5 text-inverater-accent mr-2" />
+                <h3 className="font-semibold text-gray-800">Etapa</h3>
+              </div>
+              <div className="mt-auto">
+                <div className="text-lg font-bold mt-1">Desarrollado</div>
+                <div className="text-sm text-gray-500 mt-1">Edificio terminado</div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-4">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <div className="w-6 text-gray-400 mr-2">▲</div>
-                <span className="text-gray-700">Plusvalía mínima</span>
+        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm">
+          <CardContent className="p-0">
+            <div className="p-4 flex flex-col h-full">
+              <div className="flex items-center mb-2">
+                <BarChart className="h-5 w-5 text-inverater-secondary mr-2" />
+                <h3 className="font-semibold text-gray-800">Apreciación</h3>
               </div>
-              <div className="flex items-center space-x-4">
-                <span className="font-medium">Anual: 9%</span>
-                <span className="font-bold">Total: 21%</span>
-              </div>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <div className="w-6 text-gray-400 mr-2">▲</div>
-                <span className="text-gray-700">Plusvalía estimada</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <span className="font-medium">Anual: 21.5%</span>
-                <span className="font-bold">Total: 50.17%</span>
+              <div className="mt-auto">
+                <div className="flex items-center">
+                  <span className="text-lg font-bold">2%</span>
+                  <ArrowUpRight className="ml-1 h-4 w-4 text-inverater-accent" />
+                </div>
+                <div className="text-sm text-gray-500 mt-1">Último período</div>
               </div>
             </div>
-            
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 text-gray-400 mr-2" />
-                <span className="text-gray-700">Fecha de reparto</span>
+          </CardContent>
+        </Card>
+        
+        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm">
+          <CardContent className="p-0">
+            <div className="p-4 flex flex-col h-full">
+              <div className="flex items-center mb-2">
+                <Building className="h-5 w-5 text-inverater-primary mr-2" />
+                <h3 className="font-semibold text-gray-800">Tipo</h3>
               </div>
-              <span className="font-medium">05/01/2027</span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <DollarSign className="w-5 h-5 text-gray-400 mr-2" />
-                <span className="text-gray-700">Precio del CETE Inmobiliario</span>
+              <div className="mt-auto">
+                <div className="text-lg font-bold mt-1">Residencial</div>
+                <div className="text-sm text-gray-500 mt-1">Torre de apartamentos</div>
               </div>
-              <span className="font-medium">1000 $</span>
             </div>
-          </div>
-          
-          <div className="space-y-4">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 text-gray-400 mr-2" />
-                <span className="text-gray-700">Permanencia mínima</span>
-              </div>
-              <span className="font-medium">05/09/2026</span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <DollarSign className="w-5 h-5 text-gray-400 mr-2" />
-                <span className="text-gray-700">Valor total de la campaña</span>
-              </div>
-              <span className="font-medium">3.751.067 $</span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <AlertTriangle className="w-5 h-5 text-gray-400 mr-2" />
-                <span className="text-gray-700">Penalización de venta anticipada</span>
-              </div>
-              <span className="font-medium">20%</span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <Medal className="w-5 h-5 text-gray-400 mr-2" />
-                <span className="text-gray-700">Comisión de fide-éxito</span>
-              </div>
-              <span className="font-medium">20%</span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <DollarSign className="w-5 h-5 text-gray-400 mr-2" />
-                <span className="text-gray-700">Comisión de administración</span>
-              </div>
-              <span className="font-medium">1%</span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <div className="flex items-center">
-                <Shield className="w-5 h-5 text-gray-400 mr-2" />
-                <span className="text-gray-700">Garantía</span>
-              </div>
-              <span className="font-medium">Fiduciaria</span>
-            </div>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       </div>
+      
+      <Card className="rounded-xl shadow-sm border-0 overflow-hidden">
+        <div className="flex justify-between items-center p-4 border-b">
+          <h2 className="text-lg font-bold text-gray-800">Detalles del Proyecto</h2>
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <Button variant="ghost" size="sm" className="font-medium text-inverater-secondary">
+                <Clock className="mr-1 h-4 w-4" />
+                <span>20/03/2025</span>
+              </Button>
+            </HoverCardTrigger>
+            <HoverCardContent className="w-80">
+              <p className="text-sm">
+                Fecha de inicio del proyecto. El rendimiento se calcula a partir de esta fecha.
+              </p>
+            </HoverCardContent>
+          </HoverCard>
+        </div>
+        <CardContent className="p-4">
+          <div className="prose prose-sm max-w-none">
+            <p>
+              Torre Alejandría Residencias es un desarrollo inmobiliario de alta calidad ubicado en una zona premium de la ciudad. Este proyecto ofrece apartamentos de lujo con acabados de primera y amenidades exclusivas para sus residentes.
+            </p>
+            <p>
+              Con una ubicación estratégica y un diseño arquitectónico moderno, Torre Alejandría representa una excelente oportunidad de inversión con alto potencial de apreciación y rentabilidad.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
+            <div className="bg-gray-50 p-3 rounded-lg">
+              <div className="text-sm text-gray-500">Ubicación</div>
+              <div className="font-medium">San Pedro Garza García</div>
+            </div>
+            <div className="bg-gray-50 p-3 rounded-lg">
+              <div className="text-sm text-gray-500">Desarrollador</div>
+              <div className="font-medium">Grupo Inmobiliario ABC</div>
+            </div>
+            <div className="bg-gray-50 p-3 rounded-lg">
+              <div className="text-sm text-gray-500">Superficie</div>
+              <div className="font-medium">15,000 m²</div>
+            </div>
+            <div className="bg-gray-50 p-3 rounded-lg">
+              <div className="text-sm text-gray-500">Unidades</div>
+              <div className="font-medium">120 departamentos</div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   );
 };
