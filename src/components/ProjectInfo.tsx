@@ -1,9 +1,60 @@
-import { CheckCircle2, BarChart, Building, Clock, ArrowUpRight, DollarSign, Percent } from "lucide-react";
+import { CheckCircle2, BarChart, Building, Clock, ArrowUpRight, DollarSign, Percent, Calendar, HelpCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
+
 const ProjectInfo = () => {
   return <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
+          <CardContent className="p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <DollarSign className="h-6 w-6 text-orange-500" />
+                <h3 className="text-gray-600">Valor total de la campaña</h3>
+              </div>
+              <HoverCard>
+                <HoverCardTrigger asChild>
+                  <Button variant="ghost" size="icon" className="h-6 w-6">
+                    <HelpCircle className="h-4 w-4 text-gray-400" />
+                  </Button>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-80">
+                  <p className="text-sm">
+                    Valor total de la campaña de inversión para este proyecto inmobiliario.
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+            </div>
+            <p className="text-3xl font-bold mt-2">$9,000,000</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
+          <CardContent className="p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Calendar className="h-6 w-6 text-orange-500" />
+                <h3 className="text-gray-600">Fecha de reparto</h3>
+              </div>
+              <HoverCard>
+                <HoverCardTrigger asChild>
+                  <Button variant="ghost" size="icon" className="h-6 w-6">
+                    <HelpCircle className="h-4 w-4 text-gray-400" />
+                  </Button>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-80">
+                  <p className="text-sm">
+                    Fecha estimada para el reparto de rendimientos del proyecto.
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+            </div>
+            <p className="text-3xl font-bold mt-2">05/09/2027</p>
+          </CardContent>
+        </Card>
+      </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
           <CardContent className="p-0">
@@ -100,4 +151,5 @@ const ProjectInfo = () => {
       </Card>
     </div>;
 };
+
 export default ProjectInfo;
