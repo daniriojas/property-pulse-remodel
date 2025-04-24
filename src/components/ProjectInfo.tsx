@@ -1,15 +1,9 @@
-
-import { 
-  CheckCircle2, BarChart, Building, Clock, ArrowUpRight,
-  DollarSign, Percent
-} from "lucide-react";
+import { CheckCircle2, BarChart, Building, Clock, ArrowUpRight, DollarSign, Percent } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
-
 const ProjectInfo = () => {
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
           <CardContent className="p-0">
@@ -21,7 +15,7 @@ const ProjectInfo = () => {
               <div className="mt-auto">
                 <div className="text-3xl font-bold text-orange-500">54.48%</div>
                 <div className="text-lg text-gray-500 mt-1">18.16% anual</div>
-                <div className="text-sm text-gray-400 mt-1">total</div>
+                
               </div>
             </div>
           </CardContent>
@@ -104,8 +98,6 @@ const ProjectInfo = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default ProjectInfo;
