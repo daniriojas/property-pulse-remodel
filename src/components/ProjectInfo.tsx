@@ -1,5 +1,8 @@
 
-import { CheckCircle2, BarChart, Building, Clock, ArrowUpRight } from "lucide-react";
+import { 
+  CheckCircle2, BarChart, Building, Clock, ArrowUpRight,
+  DollarSign, Percent
+} from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
@@ -12,30 +15,28 @@ const ProjectInfo = () => {
           <CardContent className="p-0">
             <div className="p-4 flex flex-col h-full">
               <div className="flex items-center mb-2">
-                <CheckCircle2 className="h-5 w-5 text-inverater-accent mr-2" />
-                <h3 className="font-semibold text-gray-800">Etapa</h3>
+                <Percent className="h-5 w-5 text-orange-500 mr-2" />
+                <h3 className="font-semibold text-gray-800">TIR Estimada</h3>
               </div>
               <div className="mt-auto">
-                <div className="text-lg font-bold mt-1">Desarrollado</div>
-                <div className="text-sm text-gray-500 mt-1">Edificio terminado</div>
+                <div className="text-3xl font-bold text-orange-500">54.48%</div>
+                <div className="text-lg text-gray-500 mt-1">18.16% anual</div>
+                <div className="text-sm text-gray-400 mt-1">total</div>
               </div>
             </div>
           </CardContent>
         </Card>
-        
+
         <Card className="bg-white rounded-xl overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
           <CardContent className="p-0">
             <div className="p-4 flex flex-col h-full">
               <div className="flex items-center mb-2">
-                <BarChart className="h-5 w-5 text-inverater-secondary mr-2" />
-                <h3 className="font-semibold text-gray-800">Apreciación</h3>
+                <DollarSign className="h-5 w-5 text-blue-500 mr-2" />
+                <h3 className="font-semibold text-gray-800">Precio CETE</h3>
               </div>
               <div className="mt-auto">
-                <div className="flex items-center">
-                  <span className="text-lg font-bold">2%</span>
-                  <ArrowUpRight className="ml-1 h-4 w-4 text-inverater-accent" />
-                </div>
-                <div className="text-sm text-gray-500 mt-1">Último período</div>
+                <div className="text-3xl font-bold text-blue-500">$1,000</div>
+                <div className="text-lg text-gray-500 mt-1">Inversión mínima</div>
               </div>
             </div>
           </CardContent>
