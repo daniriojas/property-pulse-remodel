@@ -1,4 +1,4 @@
-import { CheckCircle2, BarChart, Building, Clock, ArrowUpRight, DollarSign, Percent, Calendar, HelpCircle } from "lucide-react";
+import { AlertTriangle, Award, Shield, DollarSign, Percent, Calendar, Building, Clock, HelpCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
@@ -103,6 +103,59 @@ const ProjectInfo = () => {
         </Card>
       </div>
       
+      <div className="bg-gray-50 rounded-xl p-6">
+        <h2 className="text-xl font-semibold text-gray-800 mb-4">Comisiones y Garantías</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-orange-100">
+                <AlertTriangle className="h-5 w-5 text-orange-500" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-600">Penalización</p>
+                <p className="text-lg font-semibold">20%</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-blue-100">
+                <Award className="h-5 w-5 text-blue-500" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-600">Comisión éxito</p>
+                <p className="text-lg font-semibold">20%</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-green-100">
+                <Shield className="h-5 w-5 text-green-500" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-600">Garantía</p>
+                <p className="text-lg font-semibold">Fiduciaria</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-between bg-white p-4 rounded-lg shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-purple-100">
+                <DollarSign className="h-5 w-5 text-purple-500" />
+              </div>
+              <div>
+                <p className="text-sm text-gray-600">Admin</p>
+                <p className="text-lg font-semibold">1%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Card className="rounded-xl shadow-sm border-0 overflow-hidden">
         <div className="flex justify-between items-center p-4 border-b">
           <h2 className="text-lg font-bold text-gray-800">Detalles del Proyecto</h2>
